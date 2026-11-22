@@ -31,6 +31,10 @@ class WatermarkMgrService(BaseModuleService):
         existing = [r for r in cp_rows if str(r.get("数据流", "")) == tag]
         if existing:
             existing[0]["保存位点"] = str(entry.get("提交位点", ""))
+            existing[0].pop("位点来源", None)
+            existing[0].pop("位点格式", None)
+            existing[0].pop("格式版本", None)
+            existing[0].pop("位点迁移", None)
             existing[0]["保存时间"] = "2026-11-18 10:35:00"
             existing[0]["status"] = "已保存"
             existing[0]["pending"] = True

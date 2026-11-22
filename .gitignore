@@ -116,3 +116,6 @@ desktop.ini
 !**/.env.example
 !.env.example
 # END S11 LOCAL SNAPSHOT EXCLUSIONS
+
+# ===== 本地保存位点状态库 =====
+backend/.state/
